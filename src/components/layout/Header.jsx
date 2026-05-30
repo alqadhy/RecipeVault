@@ -20,7 +20,7 @@ function Logo() {
 
 function Header() {
   return (
-    <header className="bg-white py-4 shadow-sm sticky inset-0">
+    <header className="bg-white py-4 shadow-sm sticky inset-0 z-1000">
       <MainContainer className="flex flex-wrap justify-between items-center gap-x-8 gap-y-3">
         <Logo />
         <SearchBar
