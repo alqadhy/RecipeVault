@@ -1,6 +1,10 @@
 // Main CSS File
 import "@/styles/globals.css";
 
+// Components
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
 // Application Fonts
 import { Playfair_Display, Inter } from "next/font/google";
 
@@ -24,7 +28,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
