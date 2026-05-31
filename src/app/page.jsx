@@ -19,7 +19,7 @@ import {
 // Utils
 import shuffleArray from "@/utils/shuffleArray";
 
-async function Home() {
+async function HomePage() {
   const [allCategories, allAreas, multipleRandomMeals] = await Promise.all([
     getAllCategories(),
     getAllAreas(),
@@ -109,4 +109,4 @@ async function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

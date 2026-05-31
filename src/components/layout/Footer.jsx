@@ -7,7 +7,7 @@ import { Heart } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-card-foreground py-12">
+    <footer className="bg-card-foreground mt-24 py-12">
       <MainContainer>
         <p className="flex flex-wrap items-center justify-center gap-2 text-secondary">
           Made with <Heart size={16} fill="var(--theme)" color="var(--theme)" />{" "}

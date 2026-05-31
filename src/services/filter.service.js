@@ -4,7 +4,7 @@ import api from "./api";
 export async function filterMealsByCategory(category) {
   try {
     const res = await api.get(`/filter.php?c=${category}`);
-    return res.data;
+    return res.data.meals;
   } catch (error) {
     console.log(error);
   }

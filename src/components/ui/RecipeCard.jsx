@@ -5,6 +5,9 @@ import Image from "next/image";
 import { ChefHat } from "lucide-react";
 import Link from "next/link";
 
+// Meal Placeholder Image
+import mealPlaceholder from "../../../public/imgs/meal_placeholder.png";
+
 function RecipeCard({ id, img, title, category, area }) {
   return (
     <div className="recipe-card bg-white rounded-xl relative overflow-hidden shadow-md transition-shadow group hover:shadow-xl">
@@ -14,7 +17,7 @@ function RecipeCard({ id, img, title, category, area }) {
         </span>
         <div className="image-wrapper overflow-hidden">
           <Image
-            src={img}
+            src={img || mealPlaceholder}
             alt={title}
             width={100}
             height={100}
