@@ -31,7 +31,7 @@ export function getMultipleRandomMeals(count) {
 export async function getAllCategories() {
   try {
     const res = await api.get("/categories.php");
-    return res.data;
+    return res.data.categories;
   } catch (error) {
     console.log(error);
   }
@@ -40,7 +40,7 @@ export async function getAllCategories() {
 export async function getAllAreas() {
   try {
     const res = await api.get("/list.php?a=list");
-    return res.data;
+    return res.data.meals.filter((area) => area.strCountry != "Israel");
   } catch (error) {
     console.log(error);
   }
