@@ -1,0 +1,14 @@
+.videoWrapper {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.videoWrapper :global(lite-youtube) {
+  max-width: 100% !important;
+  height: 100% !important;
+}

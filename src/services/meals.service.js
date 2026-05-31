@@ -4,7 +4,7 @@ import api from "./api";
 export async function getMealById(id) {
   try {
     const res = await api.get(`/lookup.php?i=${id}`);
-    return res.data;
+    return res.data.meals[0];
   } catch (error) {
     console.log(error);
   }
@@ -46,7 +46,7 @@ export async function getAllAreas() {
   }
 }
 
-export function getIngredients(meal) {
+export function getMealIngredients(meal) {
   const ingredients = [];
 
   for (let i = 1; i <= 20; i++) {
@@ -55,6 +55,7 @@ export function getIngredients(meal) {
 
     if (ingredient && ingredient.trim()) {
       ingredients.push({
+        id: crypto.randomUUID(),
         ingredient: ingredient,
         measure: measure || "",
       });

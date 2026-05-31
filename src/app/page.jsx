@@ -11,6 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 // APIs
 import {
+  getRandomMeal,
   getAllCategories,
   getAllAreas,
   getMultipleRandomMeals,
@@ -20,16 +21,41 @@ import {
 import shuffleArray from "@/utils/shuffleArray";
 
 async function HomePage() {
-  const [allCategories, allAreas, multipleRandomMeals] = await Promise.all([
-    getAllCategories(),
-    getAllAreas(),
-    getMultipleRandomMeals(12),
-  ]);
+  const [randomMeal, allCategories, allAreas, multipleRandomMeals] =
+    await Promise.all([
+      getRandomMeal(),
+      getAllCategories(),
+      getAllAreas(),
+      getMultipleRandomMeals(12),
+    ]);
   const displayableAreas = shuffleArray([...allAreas]).slice(0, 12);
 
   return (
     <>
-      <Hero />
+      <Hero
+        img={randomMeal.strMealThumb}
+        alt={randomMeal.strMeal}
+        alignItems="items-center"
+        className="h-[600px]"
+      >
+        <span className="inline-block bg-theme mb-4 px-4 py-2 rounded-full font-medium">
+          Featured Recipe
+        </span>
+        <h1 className="font-playfair-display text-4xl font-bold leading-tight mb-6 md:max-w-2xl md:text-6xl">
+          {randomMeal.strMeal}
+        </h1>
+        <p className="text-white/90 text-xl mb-8">
+          {randomMeal.strCategory} • {randomMeal.strCountry} Cuisine
+        </p>
+        <Link
+          href={`/recipe/${randomMeal.idMeal}`}
+          title="View recipe"
+          className="bg-theme w-fit px-8 py-4 rounded-lg flex items-center gap-2 text-lg font-medium transition-colors hover:bg-theme-alt"
+        >
+          View Recipe
+          <ArrowRight size={20} />
+        </Link>
+      </Hero>
 
       <section className="categories py-16">
         <MainContainer>
