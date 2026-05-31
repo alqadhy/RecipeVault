@@ -36,7 +36,7 @@ async function Hero() {
             {randomMeal.strCategory} • {randomMeal.strCountry} Cuisine
           </p>
           <Link
-            href={`/cusine/${randomMeal.idMeal}`}
+            href={`/cuisine/${randomMeal.idMeal}`}
             title="View recipe"
             className="bg-theme w-fit px-8 py-4 rounded-lg flex items-center gap-2 text-lg font-medium transition-colors hover:bg-theme-alt"
           >

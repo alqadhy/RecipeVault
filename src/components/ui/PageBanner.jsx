@@ -8,7 +8,12 @@ import { ArrowLeft } from "lucide-react";
 function PageBanner({ heading, paragraph, fromColor, toColor }) {
   return (
     <div
-      className={`page-banner bg-gradient-to-r from-[${fromColor}] to-[${toColor}] text-white py-20`}
+      className={`page-banner bg-gradient-to-r text-white py-20`}
+      style={{
+        "--tw-gradient-from": fromColor,
+        "--tw-gradient-to": toColor,
+        "--tw-gradient-stops": "var(--tw-gradient-from), var(--tw-gradient-to)",
+      }}
     >
       <MainContainer>
         <Link

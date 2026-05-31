@@ -14,7 +14,7 @@ async function CategoryPage({ params }) {
     <>
       <PageBanner
         heading={`${category} Recipes`}
-        paragraph={`Explore ${recipes.length} delicious chicken recipes`}
+        paragraph={`Explore ${recipes.length} delicious ${category} recipes`}
         fromColor="#FF6B35"
         toColor="#F7B32B"
       />

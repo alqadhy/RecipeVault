@@ -13,7 +13,7 @@ export async function filterMealsByCategory(category) {
 export async function filterMealsByArea(area) {
   try {
     const res = await api.get(`/filter.php?a=${area}`);
-    return res.data;
+    return res.data.meals;
   } catch (error) {
     console.log(error);
   }

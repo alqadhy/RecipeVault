@@ -8,13 +8,15 @@ import Link from "next/link";
 // Meal Placeholder Image
 import mealPlaceholder from "../../../public/imgs/meal_placeholder.png";
 
-function RecipeCard({ id, img, title, category, area }) {
+function RecipeCard({ id, img, title, category = "", area }) {
   return (
     <div className="recipe-card bg-white rounded-xl relative overflow-hidden shadow-md transition-shadow group hover:shadow-xl">
       <Link href={`/recipe/${id}`} title={title} className="block">
-        <span className="absolute top-3 left-3 z-2 px-3 py-1 bg-theme text-white text-sm font-medium rounded-full">
-          {category}
-        </span>
+        {category && (
+          <span className="absolute top-3 left-3 z-2 px-3 py-1 bg-theme text-white text-sm font-medium rounded-full">
+            {category}
+          </span>
+        )}
         <div className="image-wrapper overflow-hidden">
           <Image
             src={img || mealPlaceholder}
