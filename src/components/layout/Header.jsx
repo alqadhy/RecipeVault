@@ -1,22 +1,8 @@
 // Components
-import Image from "next/image";
 import MainContainer from "../ui/MainContainer";
-import Link from "next/link";
+import Logo from "../ui/Logo";
 import SearchBar from "../ui/SearchBar";
-
-// Logo Icon
-import logoIcon from "../../../public/imgs/logo_icon.png";
-
-function Logo() {
-  return (
-    <Link href="/" title="RecipeVault" className="flex items-center gap-2">
-      <Image src={logoIcon} alt="RecipeVault" className="w-[32px] h-[32px]" />
-      <span className="font-playfair-display text-2xl font-bold">
-        RecipeVault
-      </span>
-    </Link>
-  );
-}
+import Link from "next/link";
 
 function Header() {
   return (
