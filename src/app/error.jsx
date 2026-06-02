@@ -3,7 +3,7 @@
 // Components
 import MainContainer from "@/components/ui/MainContainer";
 
-function Error({ error, reset }) {
+function PageError({ error, reset }) {
   return (
     <section className="error py-20 text-center">
       <MainContainer>
@@ -21,4 +21,4 @@ function Error({ error, reset }) {
   );
 }
 
-export default Error;
+export default PageError;

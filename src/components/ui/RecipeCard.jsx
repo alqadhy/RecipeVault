@@ -10,7 +10,7 @@ import mealPlaceholder from "../../../public/imgs/meal_placeholder.png";
 
 function RecipeCard({ id, img, title, category = "", area }) {
   return (
-    <div className="recipe-card bg-white rounded-xl relative overflow-hidden shadow-md transition-shadow group hover:shadow-xl">
+    <div className="recipe-card bg-white rounded-xl relative overflow-hidden shadow-md transition-all group hover:shadow-xl hover:translate-y-[-8px] hover:scale-[1.02]">
       <Link href={`/recipe/${id}`} title={title} className="block">
         {category && (
           <span className="absolute top-3 left-3 z-2 px-3 py-1 bg-theme text-white text-sm font-medium rounded-full">

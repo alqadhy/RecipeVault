@@ -1,5 +1,6 @@
 // API Provider
 import api from "./api";
+import { filterMealsByCategory } from "./filter.service";
 
 export async function getMealById(id) {
   try {
@@ -63,4 +64,16 @@ export function getMealIngredients(meal) {
   }
 
   return ingredients;
+}
+
+export async function getAllMeals() {
+  const categories = await getAllCategories();
+
+  const responses = await Promise.all(
+    categories.map(async (cat) => await filterMealsByCategory(cat.strCategory)),
+  );
+
+  const meals = responses.flat();
+
+  return Array.from(new Map(meals.map((meal) => [meal.idMeal, meal])).values());
 }

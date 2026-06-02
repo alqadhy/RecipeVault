@@ -10,6 +10,7 @@ function Header() {
       <MainContainer className="flex flex-wrap justify-between items-center gap-x-8 gap-y-3">
         <Logo />
         <SearchBar
+          title="Search recipes"
           placeholder="Search recipes..."
           className="flex-grow-1 max-w-xl"
         />
