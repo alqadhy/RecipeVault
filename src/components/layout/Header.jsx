@@ -2,7 +2,6 @@
 import MainContainer from "../ui/MainContainer";
 import Logo from "../ui/Logo";
 import SearchBar from "../ui/SearchBar";
-import Link from "next/link";
 
 function Header() {
   return (
@@ -10,17 +9,9 @@ function Header() {
       <MainContainer className="flex flex-wrap justify-between items-center gap-x-8 gap-y-3">
         <Logo />
         <SearchBar
-          title="Search recipes"
           placeholder="Search recipes..."
           className="flex-grow-1 max-w-xl"
         />
-        <Link
-          href="/search"
-          title="Browse all recipes"
-          className="bg-theme px-6 py-3 rounded-lg text-white font-bold transition-colors hover:bg-theme-alt"
-        >
-          Browse All
-        </Link>
       </MainContainer>
     </header>
   );
