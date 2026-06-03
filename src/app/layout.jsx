@@ -5,9 +5,11 @@ import "@/styles/globals.css";
 import ToastProvider from "@/components/layout/ToastsProvider";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Loader from "@/components/layout/Loader";
 
 // Application Fonts
 import { Playfair_Display, Inter } from "next/font/google";
+import { Suspense } from "react";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -31,7 +33,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
       <body className="bg-secondary">
         <ToastProvider>
-          <Header />
+          <Suspense fallback={<Loader />}>
+            <Header />
+          </Suspense>
           {children}
           <Footer />
         </ToastProvider>
