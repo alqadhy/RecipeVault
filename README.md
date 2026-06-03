@@ -8,7 +8,7 @@ Explore recipes from different cuisines around the world, browse meal categories
 
 ## 🌐 Live Demo
 
-🔗 **Demo:** [Add Your Live Demo URL Here]
+🔗 **Demo:** [https://project-recipe-vault.netlify.app/]
 
 ---
 
@@ -16,23 +16,23 @@ Explore recipes from different cuisines around the world, browse meal categories
 
 ### 🏠 Home Page
 
-![Home Page](./screenshots/home-page.png)
+![Home Page](./public/imgs/project_overview/home.png)
 
 ### 🍲 Recipe Details
 
-![Recipe Details](./screenshots/recipe-details.png)
+![Recipe Details](./public/imgs/project_overview/recipe.png)
 
 ### 🔍 Search Page
 
-![Search Page](./screenshots/search-page.png)
+![Search Page](./public/imgs/project_overview/search.png)
 
 ### 🌎 Browse By Cuisine
 
-![Cuisine Page](./screenshots/cuisine-page.png)
+![Cuisine Page](./public/imgs/project_overview/browse-by-cuisine.png)
 
 ### 📂 Browse By Category
 
-![Category Page](./screenshots/category-page.png)
+![Category Page](./public/imgs/project_overview/browse-by-category.png)
 
 ---
 
@@ -166,13 +166,13 @@ Responsibilities include:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/alqadhy/RecipeVault.git
 ```
 
 ### Navigate into the project
 
 ```bash
-cd your-repository-name
+cd RecipeVault
 ```
 
 ### Install dependencies
