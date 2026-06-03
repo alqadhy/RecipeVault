@@ -3,7 +3,17 @@
 // Components
 import MainContainer from "@/components/ui/MainContainer";
 
+// Hooks
+import { useEffect } from "react";
+
+// React Toastify
+import { toast } from "react-toastify";
+
 function PageError({ error, reset }) {
+  useEffect(() => {
+    toast.error("Something went wrong!");
+  }, []);
+
   return (
     <section className="error py-20 text-center">
       <MainContainer>

@@ -7,6 +7,9 @@ import { Search } from "lucide-react";
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
+// React Toastify
+import { toast } from "react-toastify";
+
 function SearchBar({ placeholder, className = "" }) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -20,6 +23,11 @@ function SearchBar({ placeholder, className = "" }) {
     e.preventDefault();
 
     const searchQuery = searchValue.trim();
+
+    if (searchQuery == "") {
+      toast.error("Search query cannot be empty!");
+      return;
+    }
 
     const params = new URLSearchParams();
     params.set("q", searchQuery);

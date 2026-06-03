@@ -1,3 +1,6 @@
+// Components
+import Link from "next/link";
+
 // Icons
 import { Search } from "lucide-react";
 
@@ -9,14 +12,15 @@ function EmptySearchResults() {
         No results to show
       </h2>
       <p className="mt-2 mb-6 text-muted-foreground">
-        Try adjusting your search or filters
+        Try adjusting your search
       </p>
-      <button
-        title="cleat all filters"
+      <Link
+        href="/"
+        title="Return to the home page"
         className="bg-theme px-6 py-3 rounded-lg text-white font-bold transition-colors hover:bg-theme-alt cursor-pointer"
       >
-        Clear Filters
-      </button>
+        Return Home
+      </Link>
     </div>
   );
 }

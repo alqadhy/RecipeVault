@@ -32,7 +32,7 @@ export function getMultipleRandomMeals(count) {
 export async function getAllCategories() {
   try {
     const res = await api.get("/categories.php");
-    return res.data.categories;
+    return res.data.categories.filter((cat) => cat.strCategory != "Pork");
   } catch (error) {
     console.log(error);
   }
